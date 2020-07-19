@@ -1,0 +1,205 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\openSourceSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+     \vspace{4pt} \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-6pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{\href{https://www.linkedin.com/in/zsshen/}{\Large Zong-Xian (Andy) Shen}} & Email : \href{mailto:andy.zsshen@gmail.com}{andy.zsshen@gmail.com}\\
+	\href{https://www.linkedin.com/in/zsshen/}{https://www.linkedin.com/in/zsshen/} & Mobile : +1-650-770-5999 \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+\small Graduate student at CMU with expertise in distributed system and cloud computing seeking \textbf{fulltime SDE/infrastructure} roles. 3-year experience in scalable \textbf{e-Commerce backends}, high-performance \textbf{data pipelines}, and large-scale \textbf{cloud orchestration}. Open-source developer contributing to various projects, including \textbf{Mozilla's JavaScript Just-in-Time compiler}.
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Carnegie Mellon University}{Mountain View, CA}
+{M.S. in Software Engineering;  GPA: 3.74/4}{Aug. 2019 -- Dec. 2020}
+\resumeSubheading
+{National Chiao Tung University}{Hsinchu, Taiwan}
+{M.S./B.S. in Computer Science; GPA: 4/4 (M.S.), 3.14/4 (B.S.)}{Sep. 2007 -- July. 2013}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Amazon}{Seattle, WA}
+{Security Engineer Intern, Vulnerability Research Program}{May. 2020 - Aug. 2020}
+
+\resumeItemListStart
+\vspace{3pt}
+\item{Enhanced the \textbf{cyberthreat analytics} platform by co-building a new service with \textbf{Java Spring} running on \textbf{ECS}, a new data pipeline with \textbf{CloudWatch}, \textbf{Lambda}, and \textbf{DynamoDB}, and a new metrics dashboard with \textbf{QuickSight} and \textbf{Redshift}}
+
+\item{Researched threat incident reports regarding \textbf{XSS} and \textbf{CSRF} attacks against amazon.com and the subsidiaries}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{Appier Inc.}{Taipei, Taiwan}
+{System Engineer, Realtime Bidding \& Ads Infrastructure}{Nov. 2016 -- Jun. 2019}
+
+\vspace{3pt} \small {Worked as a Scrumban team of 9 to build scalable realtime bidding system with \textbf{1K+} servers to serve \textbf{1M+} QPS}
+\resumeItemListStart
+\item{Boosted the QPS by \textbf{20X} and doubled the business revenue by constructing the new bidding system at the global
+      scale with C++ 14/17 and \textbf{Nginx} running on \textbf{AWS} and \textbf{GCP}}
+
+\item{Reduced orchestration and alert response time of the bidding system by \textbf{30X} through constructing a money flow
+      tracking and server performance monitoring system with \textbf{Ansible}, \textbf{Kafka}, \textbf{Cassandra}, and \textbf{Grafana}}
+
+\resumeItemListEnd
+
+\resumeSubheading
+{Trend Micro Inc.}{Taipei, Taiwan}
+{Software Engineer, Core Malware Detection Engine}{Sep. 2013 -- Nov. 2016}
+
+\vspace{3pt} \small{Worked in a global engineering group to develop scan engine and detection signatures to protect \textbf{250M+} endpoints}
+\resumeItemListStart
+\item{Boosted the throughput of engine and signature verification platform by \textbf{24X} using \textbf{Docker} and
+      \textbf{Kubernetes} to simplify and balance the workload of test units running on \textbf{VMWare's vSphere}}
+
+\item{Create an ML-powered malware classifier using \textbf{XGBoost} and bytecode n-gram for .NET malware detection, yielding \textbf{98\%} detection rate for \textbf{5M+} banked malware samples and \textbf{0.1\%} false alarm rate for \textbf{5M+} normal files}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Open Source Contribution}
+
+\resumeSubHeadingListStart
+\openSourceSubheading
+{Mozilla, {\normalfont Compiler Developer} | {\normalfont Contribution Profile: https://mzl.la/2fO3bJQ}}{}
+{}{}
+
+\small Optimized the \textbf{Just-in-Time compiler} of \textbf{SpiderMonkey JavaScript engine} via control and data flow analysis to eliminate redundant bytecode and expressions, contributing to features deployed in Firefox 35 to boost web browsing experience
+
+\openSourceSubheading
+{GitHub, {\normalfont Open Source Contributor} | {\normalfont \textbf{2K+} Stars, All Projects Combined: https://github.com/ZSShen} }{}
+{}{}
+
+\small Created various programming utilities and profiling tools including a dynamic instrumentation kit to analyze Android malware, a \textbf{malware classifier} for signature generation, and a \textbf{cross-platform C data structure library} with \textbf{93\% unit test coverage}
+
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Selected Academic Projects}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Code Snippet Recommendation Service}{Distributed System, CMU}
+{High Performance Full-text Search Engine on \textbf{GCP} }{Spring 2020}
+
+\vspace{3pt} \small {Led a team of 3 to build the engine supporting exact and fuzzy code snippet search with 500GB raw data set, achieving \textbf{13K+} QPS with \textbf{ElasticSearch} and \textbf{Memcached} hybrid backend running on 5 E2-standard-2 (2 CPU/8G RAM) nodes}
+
+\resumeSubheading
+{Emergency Social Network}{Foundations of Software Engineering, CMU}
+{Chat Room-based Web Application}{Fall 2019}
+
+\vspace{3pt}\small{Work as a team of 4 to build the social network app with 88\% test coverage using \textbf{Bootstrap}, \textbf{Express.js}, \textbf{MongoDB}, and \textbf{Axios}}
+
+
+\resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\item{
+      Language/Development: \textbf{C++}, \textbf{C}, \textbf{Python}, \textbf{Java}, \textbf{JavaScript} / \textbf{CMake}, \textbf{GDB}, \textbf{Docker}
+}
+\vspace{-3pt}
+\item{
+      Frameworks/Operation/Stroage: \textbf{Java Spring}, \textbf{AWS}, \textbf{Node.js}, \textbf{Kafka}, / \textbf{Ansible}, \textbf{Jenkins} / \textbf{MySQL}, \textbf{Cassandra}, \textbf{Prometheus}
+}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
